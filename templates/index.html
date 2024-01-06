@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Hi, I am Atharva Deokar!</h1>
+    <p>This is a small project using python,flask, html and css</p>
+        
+    {% if country == "india" %}
+        <h1>Thanks for visiting through {{ country }}</h1>
+        <h1>Currency is INR</h1>
+    {% elif country == "usa" %}
+        <h1>Thanks for visiting through {{ country }}</h1>
+        <h1>Currency is USD</h1>
+    {% else %}
+        <h1>Your default currency set to BTC</h1>   
+    {% endif %}
+
+    <img src="{{ url_for('static', filename = 'images/homepage.jpeg') }}" alt="">
+
+    {% if source %}
+        <h1>Thanks for visiting through {{ source }}</h1>
+    {% endif %}
+
+{% endblock %}

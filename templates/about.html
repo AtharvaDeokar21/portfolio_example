@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <h1>About {{ context.name }}</h1>
+    <img src="{{ url_for('static', filename = 'images/about.jpeg') }}" alt="">
+    <p>{{ context.description }}</p>
+{% endblock %}
